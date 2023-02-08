@@ -1,0 +1,28 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}! {{ name }}
+  </h1>
+  <app-test2></app-test2>
+  <br>
+  <br>
+  <br>
+
+  {{data.name}} {{data.dept}}
+  <h1>
+    <app-demo></app-demo>
+  </h1>
+ 
+</div>
+
+<app-test2 [child]="parentToChild"></app-test2>
+
+<app-card [title]="posts[0].title" [content]="posts[0].content"></app-card> 
+<app-card [title]="posts[1].title" [content]="posts[1].content"></app-card>
+
+
+<app-password></app-password>
+
+<app-output-component (fromChild)="onParent($event)" (fromThisChild)="onParentsss($event)"></app-output-component>
+
+<router-outlet></router-outlet>

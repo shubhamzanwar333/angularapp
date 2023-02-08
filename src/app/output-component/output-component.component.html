@@ -1,0 +1,14 @@
+
+
+
+<button (click)="sendToParent()">Click me from Child Class</button>
+<br>
+<br>
+
+
+
+The employee name is : <div [hidden]="!showdetails">{{empObj.name}}</div>
+The employee ID is : <div [hidden]="!showdetails">{{empObj.id}}</div>
+The employee city is : <div [hidden]="!showdetails">{{empObj.city}}</div>
+<br>
+<button (click)="sendingParent()">Click me to see object</button>

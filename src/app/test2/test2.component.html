@@ -1,0 +1,19 @@
+<button (click)="onButtonClick()"> Click me</button>
+<p>Total count is : {{count}}</p>
+ <input type="text" (keyup)="onKeyUp($event)">
+
+
+<input type="text" [(ngModel)]="firstName">
+
+  {{firstName}}
+<br>
+<br>
+<br>
+<h1>Two way databinding Assignment</h1>
+<button [disabled]="!userName" (click)="onClickButton()"> Click me to reset</button>
+<p>Username is: {{userName}} </p>  
+  <input type="text" [(ngModel)]="userName">
+
+
+
+
