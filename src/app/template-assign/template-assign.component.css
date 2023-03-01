@@ -1,0 +1,12 @@
+label {
+    font-weight: bold;
+}
+input,select {
+    background-color: burlywood;
+}
+h2 {
+    text-align: center;
+}
+form {
+    background-color: white;
+    }

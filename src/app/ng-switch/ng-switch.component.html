@@ -1,0 +1,58 @@
+<!-- <div>
+<div class="card" style="width: 18rem;" *ngFor="let course of courses">
+    <img class="card-img-top" [src]="course.iconURL" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{course.desc}}</h5>
+      <p class="card-text"></p>
+     <div [ngSwitch]="course.category">
+            <div class="btn btn-info" *ngSwitchCase="'Intermidiate'">Intermidiate</div>
+            <div class="btn btn-primary" *ngSwitchCase="'Advanced'">Advanced</div>
+
+     </div>
+
+    </div>
+  </div>
+</div> -->
+
+
+
+<!-- <select [(ngModel)]="selectedcountry">
+    <option *ngFor="let c of cricketTeams.teamName">{{c}}</option>
+</select> -->
+
+<!-- <div [ngSwitch]="players[selectedCountry]-*">
+    <div class="btn btn-info" *ngSwitchCase="'Intermidiate'">Intermidiate</div>
+    <div class="btn btn-primary" *ngSwitchCase="'Advanced'">Advanced</div>
+
+</div> -->
+<div class="dropdown">
+    <div  class="title">CRICKET WORLD CUP 2023</div>
+<select  [(ngModel)]="selectedCountry">
+    <option  *ngFor="let country of countries" [value]="country">{{country}}</option>
+  </select>
+</div>
+
+
+  <div [ngSwitch]="selectedCountry">
+    <div *ngFor="let team of cricketTeams">
+      <div *ngIf="team.teamName === selectedCountry">
+        <p class="Tname">{{team.teamName}}</p>
+        <img class="image"  [src]="team.flag" [style.width.px]="width" [style.height.px]="height">
+        <br>
+        <br>
+        <!-- <p class="players">**SQUAD**</p> -->
+        <br>
+        
+        
+          <div  class="details" *ngFor="let player of team.players">{{player}}</div>
+            
+      </div>
+    </div>
+  </div>
+
+  <!-- <ul>
+    <li  class="details" *ngFor="let player of team.players">{{player}}</li>
+  </ul>
+</div>
+</div>
+</div> -->

@@ -1,0 +1,105 @@
+<body>
+  <!-- <head>
+    <style>
+      body {
+        background-image: url('http://www.nasa.gov/sites/default/files/thumbnails/image/nasa_space_apps_challenge_registration_image_07142022.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+      }
+    </style>
+  </head> -->
+
+<div class="row justify-content-center">
+<div class="col-md-4 text-left rounded shadow py-4">
+    <form  #userForm="ngForm">
+      <h2>Template Driven Form</h2>
+    <div class="form-group">
+       <label>First Name</label>
+            <input type="text" class="form-control" name="firstName" ngModel required 
+            #firstName="ngModel" minlength="5" maxlength="15">
+            <div class="alert alert-primary" *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" role="alert">
+                Please enter first name.
+              </div>
+               
+            
+   </div>
+
+   <div class="form-group">
+    <label>Last Name</label>
+         <input type="text" class="form-control" #lastName="ngModel" required name="lastName" ngModel minlength="5" maxlength="10">
+         <div class="alert alert-danger" *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)" role="alert">
+            Please enter the last name.
+            <div class="alert alert-danger" *ngIf="lastName.errors.minlength">
+            Last name should contain minimum 5 characters.
+        </div>
+          </div>
+           
+</div>
+
+<div class="form-group">
+    <label>Age</label>
+    <input type="number" class="form-control" name="age" [(ngModel)]="age" 
+      [ngClass]="{'is-invalid': age < 17 || age > 20}" required>
+    <div *ngIf="age < 17 || age > 20" class="alert alert-danger">
+        Please enter the age between 17 and 20.
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" #email="ngModel" name="email" ngModel required pattern="^[a-zA-Z0-9._%+-]+@codemindtechnology.com$">
+    <div class="alert alert-danger" *ngIf="email.errors && (email.dirty || email.touched)">
+        <div *ngIf="email.errors.required">
+            Please enter E-mail.
+        </div>
+        <div class="alert alert-danger" *ngIf="email.errors.pattern">
+            Please enter a valid email with the domain '@codemindtechnology.com'
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="password">Enter Password</label>
+    <input type="password" class="form-control" #password="ngModel" name="password" [(ngModel)]="formData.password" (input)="checkPasswords()">
+  </div>
+  
+  <div class="form-group">
+    <label for="password">Confirm Password</label>
+    <input type="password" class="form-control" #Cpassword="ngModel" name="Cpassword" [(ngModel)]="formData.Cpassword" (input)="checkPasswords()">
+    <div *ngIf="passwordMismatch && !isSubmitted" class="alert alert-danger">Passwords do not match</div> <!-- add error message -->
+  </div>
+
+<div class="form-group">
+    <label>Contact number</label>
+         <input type="number" #contactNumber="ngModel" ngModel class="form-control" name="contactNumber" maxlength="10" required>
+         <div class="alert alert-danger" *ngIf="contactNumber.errors && (contactNumber.dirty || contactNumber.touched)">
+            <div *ngIf="contactNumber.errors.required">
+                Please enter contact number.
+            </div>
+</div>
+</div>
+<div>
+    <label>Select City</label>
+        <select class="form-control" name="city" #city="ngModel" ngModel required>
+            <option *ngFor="let city of cities"  value="{{city}}">{{city}}</option>
+  </select>
+  <div class="alert alert-danger" *ngIf="city.errors && (city.dirty || city.touched)">
+    <div *ngIf="city.errors.required">
+        Please select a city.
+    </div>
+  </div>
+</div>
+
+<label>Select Gender</label>
+<div class="form-group" *ngFor="let gender of genders">
+    <input type="radio" name="gender"  ngModel value="{{gender}}" required
+    class="custom-control custom-radio">
+    <label>{{gender}}</label>
+</div>
+<br>
+<button type="button" (click)="login(userForm)" class="btn btn-secondary">SUBMIT</button>
+</form>
+</div>
+</div>
+</body>

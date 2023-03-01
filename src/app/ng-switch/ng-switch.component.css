@@ -1,0 +1,45 @@
+.title{
+    font-weight:bold;
+    color: whitesmoke;
+    font-size: larger;
+}
+
+.details {
+    font-size: medium;
+   color: whitesmoke;
+    font-size: 25px;
+    font-weight: bold;
+    
+}
+
+.players{
+   
+    font-weight: bolder;
+    font-size:xx-large;
+    color: aquamarine;
+}
+
+.Tname{
+    padding-top: 60px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: xx-large;
+    color: whitesmoke;
+}
+
+.dropdown{
+    text-align: center;
+}
+
+.image {
+    width: 400px;
+    height: 200px;
+}
+select {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    height: 32px;
+    
+    width: 200px;
+  }

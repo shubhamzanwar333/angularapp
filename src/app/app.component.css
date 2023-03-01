@@ -1,0 +1,8 @@
+body {
+    background-image: url('https://lh3.googleusercontent.com/p/AF1QipO7UhTIZG_cfbU0BpwNW8s5QH9sK9slzYtTJD8=s1360-w1360-h1020.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+  }

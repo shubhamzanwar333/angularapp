@@ -1,0 +1,141 @@
+<!-- <mat-card class="login-page">
+    <mat-card-title>
+        Login (Template-Driven) 
+    </mat-card-title>
+    <mat-card-content>
+        <form class="login-form" #loginForm="ngForm">
+            <div ngModelGroup="userDetail" #userDetail="ngModelGroup">
+            <mat-form-field>
+                <input matInput #email="ngModel" ngModel name="email" type="email" placeholder="Email" required>
+                <mat-error *ngIf="email.errors?.required">This email is mandatory</mat-error>
+            </mat-form-field><br>
+            <mat-form-field>
+                <input matInput  ngModel name="password" type="password" placeholder="Password" required>
+                <mat-error *ngIf="password.errors?.required">This Password is mandatory</mat-error> 
+            </mat-form-field>
+        </div>
+            <button [disabled]="!loginForm.valid" mat-raised-button color="primary" (click)="login(loginForm)">Login</button>
+        </form>
+        <div class="form-val">
+            {{ loginForm.value | json}}
+        </div>
+    </mat-card-content>
+</mat-card> -->
+
+
+
+<mat-card class="login-page">
+    <mat-card-title style="color:blue ;">
+        Bank Of Maharashtra
+    </mat-card-title>
+    <h5 style="padding-bottom:20px ;">Internet Banking</h5>
+    <mat-card-content>
+        <form class="login-form" #loginForm="ngForm">
+            <label style="font-weight:500 ;">Enter Full Name: </label>&nbsp;&nbsp;
+            <mat-form-field>
+                <input matInput  ngModel name="firstName" type="text" placeholder="First Name" required>
+            </mat-form-field>
+            <mat-form-field>
+            <input matInput  ngModel name="middleName" type="text" placeholder="Middle Name" required>
+            </mat-form-field>
+            <mat-form-field>
+            <input matInput  ngModel name="lastName" type="text" placeholder="Last Name" required>
+            </mat-form-field><br>
+            
+            <label style="font-weight:500 ;">Date of Birth:</label>
+            <mat-form-field matInput ngModel name="Birthdate" appearance="fill" matDatepicker>
+                <mat-label>Choose a date</mat-label>
+                <input matInput [matDatepicker]="picker">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field><br>
+
+
+            <label style="font-weight:500 ;">Email: </label>&nbsp;&nbsp;
+            <mat-form-field>
+                <input matInput #email="ngModel" ngModel name="email" type="email" placeholder="Email" required>
+                <small *ngIf="!email.valid && email.touched">This email is mandatory</small>
+            </mat-form-field>&nbsp;&nbsp;
+            <label style="font-weight:500 ;">Password: </label>&nbsp;&nbsp;
+            <mat-form-field>
+                <input matInput  ngModel name="password" type="password" placeholder="Password" required>
+            </mat-form-field><br>
+            <br>
+                <label style="font-weight:500 ;">Account Type:</label> &nbsp;&nbsp;
+            <mat-radio-group ngModel name="account type" aria-label="Account Type: ">
+                <mat-radio-button value="Savings">Savings Account</mat-radio-button>
+                <mat-radio-button value="Current">Current Account</mat-radio-button>
+              </mat-radio-group><br>
+              <br>
+            <button [disabled]="!loginForm.valid" mat-raised-button color="primary" (click)="login(loginForm)">Login</button>
+        </form>
+        <div class="form-val">
+            {{ loginForm.value | json}}
+        </div>
+    </mat-card-content>
+</mat-card> 
+
+
+
+
+<!-- 
+<mat-card class="login-page">
+    <mat-card-title>
+        Login (Template-Driven) 
+    </mat-card-title>
+    <mat-card-content>
+        <form class="login-form" #loginForm="ngForm">
+            <form>
+            <mat-form-field>
+                
+                <input matInput type="email" name="email"
+                ngModel
+                #email="ngModel"
+                required email 
+                pattern="^[a-zA-Z0-9._%+-]+@codemindtechnology.com$"
+                placeholder="Email">
+
+                <mat-error *ngIf="email.errors?.required">The email is mandatory</mat-error>
+                <mat-error *ngIf="email.errors?.pattern"> Enter Valid Domain like '******@codemindtechnology.com'</mat-error>
+              </mat-form-field><br>
+              
+            <mat-form-field>
+                <input matInput  ngModel  #password="ngModel"  name="password" type="password" placeholder="Password" required >
+            </mat-form-field><br>
+
+        
+           
+            <mat-form-field>
+              <select class="form-control" name="course" [ngModel]="defaultValue" >
+                <option *ngFor="let course of courses"  value="{{course}}">{{course}}</option>
+              </select>
+            </mat-form-field>
+
+              <div class="form-group" *ngFor="let gender of genders">
+
+                <input type="radio" name="gender" id="gender" value="{{gender.value}}" [ngModel]="defaultGender"
+                class="custom-control custom-radio">
+                <label for="{{gender.id}}">{{gender.value}}</label>
+              </div>
+            <button  mat-raised-button color="primary" (click)="login(loginForm)">Login</button>
+        </form>
+        </form>
+        <div class="form-val">
+            
+        </div>
+    </mat-card-content>
+</mat-card>
+
+
+
+<div class="row justify-content-center mt2" *ngIf="isSubmitted">
+    <div class="col-md-6 rounded shadow py-4">
+      <h2>Form Data</h2>
+      <p>Email: <strong>{{formData.email}}</strong></p>
+      <p>Password: <strong>{{formData.password}}</strong></p>
+      <p>Course: <strong>{{formData.course}}</strong></p>
+      <p>Gender: <strong>{{formData.gender}}</strong></p>
+  
+    </div>
+  </div> -->
