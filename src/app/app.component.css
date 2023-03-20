@@ -6,3 +6,21 @@ body {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
   }
+
+  header {
+    background-color: coral;
+  }
+
+  #news {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+    color: cadetblue;
+  }
+
+  #quotes {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+    color: chartreuse
+  }

@@ -15,8 +15,9 @@
     </div>
 </div> -->
 
+<!-- Practice- @Input decorator to pass the data from Parent component to child component-->
 
-<div style="display: inline-block">
+<!-- <div style="display: inline-block">
 <div class="card" style="width: 18rem; ">
   <img class="card-img-top" [src]="image" alt="Card image cap">
   <div class="card-body">
@@ -33,4 +34,39 @@
     <a href="https://www.iplt20.com/" class="card-link">IPLt20.in</a>
   </div>
 </div>
+</div> -->
+
+<!-- --------------------------------------------------------------------------------->
+<!-- <div class="col-md-8" style="margin-left: 175px; text-align: center;">
+  <label style="font-weight:bold ;"> Please enter Your Budget</label>
+  <input type="text" class="form-control" placeholder="Enter your budget" [(ngModel)]="priceSearch" style="background-color: aquamarine ;">
+  <button type="button" class="btn btn-primary" (click)="filterProducts()"> CLICK </button>
 </div>
+
+<table>
+  <thead>
+    <tr>
+      <th scope="col" style="width:50px">ID</th>
+      <th scope="col">Title</th>
+      <th scope="col"style="width:50px">Price</th>
+      <th scope="col">Description</th>
+      <th scope="col">Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products | search: priceSearch">
+      <td class="bg-primary">{{product.id}}</td>
+      <td class="bg-success">{{product.title}}</td>
+      <td class="bg-warning">{{"$" + " " + product.price}}</td>
+      <td class="bg-danger">{{product.description}}</td>
+      <td class="bg-success"><img [src]="product.image" alt="Product image"></td>
+    </tr>
+  </tbody>
+</table> -->
+
+
+<ng-container *ngFor="let item of items">
+    
+   <p>Product Name: {{item.name}}</p>
+   <p>Product ID: {{item.id}}</p>
+</ng-container>

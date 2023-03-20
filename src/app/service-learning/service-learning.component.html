@@ -1,0 +1,40 @@
+
+
+  <ng-container *ngFor="let product of products">
+    Product Name : <strong class="text-success">{{product.name}}</strong>
+    Product Id : <strong class="text-success">{{product.id}}</strong>
+    
+    </ng-container>
+    
+
+<!-- 
+     <div class="row justify-content-center">
+      <div class="col-md-8">
+          <input type="text" class="form-control" placeholder="EnterName" [(ngModel)]="namesearch">
+      </div>
+     <table class="table table-striped table-dark">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">NAME</th>
+                <th scope="col">USERNAME</th>
+                <th scope="col">EMAIL</th>
+                <th scope="col">ADDRESS</th>
+                <th scope="col">PHONE</th>
+                <th scope="col">WEBSITE</th>
+                <th scope="col">COMPANY</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users | search: namesearch">
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.address.street}},{{user.address.suit}},{{user.address.city}},{{user.address.zipcode}}</td>
+            <td>{{user.phone}}</td>
+            <td>{{user.website}}</td>
+            <td>{{user.company.name}},{{user.company.catchPhrase}},{{user.company.bs}}</td>
+          </tr>
+        </tbody>
+      </table> -->

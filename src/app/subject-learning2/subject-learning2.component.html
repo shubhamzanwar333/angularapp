@@ -1,0 +1,8 @@
+<div class="box">
+    User name : <strong>{{userName}}</strong><br>
+    Company : <strong>{{MyCompany}}</strong>
+    <br><br>
+    <input type="text" placeholder="Update user name" #uname>
+    <input type="text" placeholder="Update your Company" #company>
+    <button class="btn btn-primary ms-2"  (click)="updateUserName(uname,company)">Update</button>
+</div>

@@ -1,0 +1,11 @@
+body {
+    background-color: grey;
+    background-image: url("https://www.shutterstock.com/image-photo/beautiful-parents-their-cute-little-260nw-716647213.jpg");
+    background-position: initial;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(50%);
+}
+header{
+    background-color: darkseagreen;
+}

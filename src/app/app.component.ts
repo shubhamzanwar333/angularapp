@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RapidapiService } from './Services/rapidapi.service';
 
 
 @Component({
@@ -65,8 +66,16 @@ export class AppComponent {
   //   name:'codemind',
   //   dept :'ID'
   // }
-  
-    constructor(){
+    resObj = {};
+    constructor(private rapidapiService : RapidapiService){
+    }
+    ngOnInit(){
+      this.rapidapiService.getFinance().subscribe(res =>{
+        this.resObj = res;
+        console.log('new results', this.resObj);
+        
+        
+      })
     }
     // onParent(val) {
     //   console.log("From child to parent: ", val);

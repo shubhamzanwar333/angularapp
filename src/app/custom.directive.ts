@@ -1,4 +1,5 @@
 import { Directive, ElementRef  } from '@angular/core';
+import { Route } from '@angular/router';
 
 
 
@@ -8,7 +9,7 @@ import { Directive, ElementRef  } from '@angular/core';
 export class CustomDirective {
 
   constructor( private el : ElementRef ) {
-    el.nativeElement.style.backgroundColor = 'gray'
+    el.nativeElement.style.backgroundColor = 'gray';
     // render.setStyle(el.nativeElement,'backgroundColor','red');
    }
 

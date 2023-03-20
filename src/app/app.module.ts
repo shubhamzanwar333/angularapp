@@ -16,7 +16,6 @@ import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 import { NgStyleComponent } from './ng-style/ng-style.component';
 import { NgClassComponent } from './ng-class/ng-class.component';
 import { PracticeComponent } from './practice/practice.component';
-import { CustomDirective } from './custom.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { TemplateFormComponent } from './template-form/template-form.component';
@@ -48,6 +47,36 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { TemplateAssignComponent } from './template-assign/template-assign.component';
 import { ReactiveForm3Component } from './reactive-form3/reactive-form3.component';
+import { ServiceLearningComponent } from './service-learning/service-learning.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PipesLearningComponent } from './pipes-learning/pipes-learning.component';
+import { CustomPipe } from './custom.pipe';
+import { ProductFilterComponent } from './product-filter/product-filter.component';
+import { SearchPipe } from './search.pipe';
+import { SubjectLearning1Component } from './subject-learning1/subject-learning1.component';
+import { SubjectLearning2Component } from './subject-learning2/subject-learning2.component';
+import { SubjectLearning3Component } from './subject-learning3/subject-learning3.component';
+import { SubjectLearning4Component } from './subject-learning4/subject-learning4.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { HomeComponent } from './home/home.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { DemopostComponent } from './demopost/demopost.component';
+import { DemopostdetailsComponent } from './demopostdetails/demopostdetails.component';
+import { Routingassign1Component } from './routingassign1/routingassign1.component';
+import { Routingassign2Component } from './routingassign2/routingassign2.component';
+import { UserdetailsComponent } from './userdetails/userdetails.component';
+import { ProductModule } from './product/product.module';
+import { MorepracticeComponent } from './morepractice/morepractice.component';
+import { OrdersModule } from './orders/orders.module';
+import { FashionComponent } from './fashion/fashion.component';
+import { FashionhubModule } from './fashion/fashionhub.module';
+import { CustomerModule } from './customer/customer.module';
+import { AdminModule } from './admin/admin.module';
+import { TodoComponent } from './todo/todo.component';
+import { LoginformComponent } from './loginform/loginform.component';
+import { HooksComponent } from './hooks/hooks.component';
+import { SearchApiAssignComponent } from './search-api-assign/search-api-assign.component';
 
 
 @NgModule({
@@ -65,11 +94,34 @@ import { ReactiveForm3Component } from './reactive-form3/reactive-form3.componen
     NgStyleComponent,
     NgClassComponent,
     PracticeComponent,
-    CustomDirective,
     TemplateFormComponent,
     ReactiveFormComponent,
     TemplateAssignComponent,
-    ReactiveForm3Component
+    ReactiveForm3Component,
+    ServiceLearningComponent,
+    PipesLearningComponent,
+    CustomPipe,
+    ProductFilterComponent,
+    SearchPipe,
+    SubjectLearning1Component,
+    SubjectLearning2Component,
+    SubjectLearning3Component,
+    SubjectLearning4Component,
+    AboutusComponent,
+    ContactusComponent,
+    HomeComponent,
+    PagenotfoundComponent,
+    DemopostComponent,
+    DemopostdetailsComponent,
+    Routingassign1Component,
+    Routingassign2Component,
+    UserdetailsComponent,
+    MorepracticeComponent,
+    FashionComponent,
+    TodoComponent,
+    LoginformComponent,
+    HooksComponent,
+    SearchApiAssignComponent
   ],
   imports: [
     BrowserModule,
@@ -99,9 +151,18 @@ import { ReactiveForm3Component } from './reactive-form3/reactive-form3.componen
     MatCheckboxModule,
     MatStepperModule,
     MatProgressBarModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    HttpClientModule ,
+    ProductModule,
+    OrdersModule,
+    FashionhubModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(){
+    console.log('App module called');
+    
+  }
+ }

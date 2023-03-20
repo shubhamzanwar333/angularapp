@@ -1,0 +1,12 @@
+<p>login</p>
+
+<input type="text" #username placeholder="username"><br>
+<input type="text" #password placeholder="password"><br>
+
+<button class="btn btn-primary" (click)="login(username.value,password.value)">Login</button><br>
+
+<br>
+
+<span>
+    {{msg}}
+</span>

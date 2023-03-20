@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
+import { MyserviceService } from '../Services/myservice.service';
 
 @Component({
   selector: 'app-reactive-form',
@@ -10,7 +11,7 @@ import { Observable } from 'rxjs';
 export class ReactiveFormComponent implements OnInit {
 
   myReactiveForm: FormGroup;
-  constructor() { 
+  constructor(private _fb: FormBuilder) { 
     this.createForm();
   }
 
@@ -38,8 +39,14 @@ export class ReactiveFormComponent implements OnInit {
 
   }
 
+  myAge() {
+   let  ObjMyserviceService = new MyserviceService();
+   this.showAge = ObjMyserviceService.ageCalculator(this.age);
+  }
+
   isSubmitted:boolean=false;
-  
+  age ;
+  showAge;
   createForm()
   {
     this.myReactiveForm = new FormGroup({
@@ -54,6 +61,15 @@ export class ReactiveFormComponent implements OnInit {
       ])
 });
     
+// this.myReactiveForm = this._fb.group({
+//   userDeatils: this._fb.group({
+//     username: ['', [Validators.required, this.NaNames.bind(this) ]],
+//     email: ['', [Validators.required, Validators.email], this.NaEmails]
+//   }),
+//   course: ['Angular'],
+//   skills: this._fb.array([])
+//  })
+
   }
 
   OnSubmit() {
@@ -87,5 +103,8 @@ export class ReactiveFormComponent implements OnInit {
     })
     return myResponse;
   }
+
+
+
 
 }
